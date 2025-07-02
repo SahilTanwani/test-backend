@@ -82,9 +82,13 @@ ${weeksSection}
     const roadmap = response.data.choices[0].message.content;
     res.status(200).json({ roadmap });
   } catch (error) {
-    console.error("OpenRouter error:", error?.response?.data || error.message);
-    res.status(500).json({ error: "Failed to generate roadmap" });
-  }
+  console.error("❌ OpenRouter error:", {
+    message: error.message,
+    status: error?.response?.status,
+    data: error?.response?.data,
+  });
+  res.status(500).json({ error: "Failed to generate roadmap" });
+}
 });
 
 // =============================
