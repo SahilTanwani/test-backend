@@ -59,7 +59,7 @@ ${weeksSection}
     console.log("🛠️ Headers being sent:", {
       Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
       "Content-Type": "application/json",
-      "HTTP-Referer": "http://localhost:5173",
+      "HTTP-Referer": "https://test-cofx.vercel.app",
       "X-Title": "PlanGenie"
     });
 
@@ -73,7 +73,7 @@ ${weeksSection}
         headers: {
           Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost:5173", // Change this to your production frontend if deployed
+          "HTTP-Referer": "https://test-cofx.vercel.app", // Change this to your production frontend if deployed
           "X-Title": "PlanGenie"
         },
       }
